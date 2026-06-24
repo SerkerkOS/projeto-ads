@@ -34,12 +34,12 @@
   }
 
   .content {
-    margin-top: 25rem;
+    margin-top: 15rem;
   }
 
   .robot-3d {
     scale: 1;
-    top: -25%;
+    top: -35%;
     right: 0;
   }
 
@@ -81,14 +81,14 @@
   }
 
   .robot-3d {
-    top: -28%;
+    top: -40%;
     right: 0;
   }
 
   .content {
     max-width: 32rem;
     margin-left: 10%;
-    margin-top: 15rem;
+    margin-top: 8rem;
   }
 
   .tag-box {

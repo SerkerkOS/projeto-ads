@@ -5,7 +5,7 @@
 @import url(header.css);
 @import url(elementos-3d.css);
 @import url(buttons.css);
+@import url(footer.css);
 .topo {
   position: relative;
-  height: 100vh;
 }
