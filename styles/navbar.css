@@ -1,0 +1,76 @@
+nav {
+  margin: auto;
+  padding: 0.5em 2em;
+  background-color: rgba(150, 150, 150, 0.153);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.206);
+  border-radius: 1em;
+  border: 1px solid rgba(255, 255, 255, 0.21);
+}
+.menu {
+  display: flex;
+  font-size: 18px;
+}
+.nav-links {
+  display: flex;
+  gap: 2em;
+}
+.nav-links li,
+.opcao li {
+  height: 100%;
+  padding: 0.5em 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+a {
+  color: whitesmoke;
+}
+.opcao {
+  position: absolute;
+  padding: 1em 0.5em;
+  margin: 0.6em -3em;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.44);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.209);
+  border-radius: 1em;
+  display: none;
+}
+li {
+  border-radius: 1em;
+  transition: 0.3s ease;
+}
+
+.dropdown,
+.dropdown-2 {
+  position: relative;
+}
+li:hover {
+  background-color: rgba(0, 0, 0, 0.505);
+}
+li:hover .opcao {
+  display: block;
+}
+.opcao-2 {
+  position: absolute;
+  padding: 0.5em 0.5em;
+  margin: -2.5em 12.2em;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.454);
+  backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.215);
+  border-radius: 2em;
+  display: none;
+}
+.dropdown-2:hover .opcao-2 {
+  display: block;
+}
+ul {
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+}
+nav a:hover {
+  color: #a7a7a7;
+}

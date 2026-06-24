@@ -1,0 +1,19 @@
+.robot-3d {
+  position: absolute;
+  right: -5%;
+  top: 20%;
+  transform: translate(-70%);
+  width: 500px;
+  height: 500px;
+  pointer-events: none;
+}
+.background-3d {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
