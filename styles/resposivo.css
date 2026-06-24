@@ -1,27 +1,20 @@
 /* MOBILE RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   header {
-    padding: 1rem 1.5rem;
+    padding: 1rem 0.1rem;
   }
 
   .hamburger {
     display: block;
   }
 
-  .menu {
-    width: 100%;
-  }
-
   nav {
     display: none;
     position: absolute;
     top: 70px;
-    right: 1rem;
-    left: 1rem;
-    width: auto;
+    right: 20px;
+    width: 250px;
     z-index: 999;
-    background-color: rgba(20, 20, 20, 0.95);
-    backdrop-filter: blur(20px);
   }
 
   nav.active {
@@ -30,61 +23,14 @@
 
   .nav-links {
     flex-direction: column;
-    gap: 0;
-  }
-
-  .nav-links > li {
-    padding: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  .opcao {
-    position: static;
-    margin: 0.5rem 0 0;
-    background: transparent;
-    backdrop-filter: none;
-    box-shadow: none;
-    padding: 0 0 0 1rem;
-    display: none;
-  }
-
-  li:hover .opcao {
-    display: none;
-  }
-
-  .opcao.visible {
-    display: block;
-  }
-
-  .opcao li {
-    padding: 0.5rem 1rem;
-  }
-
-  .opcao-2 {
-    position: static;
-    margin: 0.5rem 0 0 1rem;
-    background: transparent;
-    backdrop-filter: none;
-    box-shadow: none;
-    padding: 0;
-    display: none;
-  }
-
-  .dropdown-2:hover .opcao-2 {
-    display: none;
-  }
-
-  .opcao-2.visible {
-    display: block;
   }
 
   header h1 {
     font-size: 2rem;
   }
 
-  .btn-signin {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
+  .btn-signing {
+    padding: 0.6rem 1.5rem;
   }
 
   .content {
@@ -125,28 +71,23 @@
   }
 }
 
-@media (max-width: 600px) {
-  header {
-    padding: 0.8rem 1rem;
-  }
-
+@media (max-width: 480px) {
   header h1 {
     font-size: 1.5rem;
   }
 
-  .btn-signin {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.75rem;
+  .btn-signing {
+    padding: 0.4rem 1rem;
   }
 
   .robot-3d {
-    top: -30%;
+    top: -40%;
     right: 0;
   }
 
   .content {
-    max-width: 90%;
-    margin-left: 5%;
+    max-width: 32rem;
+    margin-left: 10%;
     margin-top: 8rem;
   }
 
@@ -168,15 +109,5 @@
   .btn-signing-main {
     font-size: 0.6rem;
     padding: 0.5rem 1.5rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .content h1 {
-    font-size: 1.6rem;
-  }
-
-  .robot-3d {
-    top: -25%;
   }
 }
