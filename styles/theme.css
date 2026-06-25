@@ -183,7 +183,7 @@ footer .copy { color: var(--text-muted) !important; border-top-color: var(--foot
 }
 
 .btn-signing-main {
-  color: var(--text) !important;
+  color: black !important;
 }
 
 li:hover {

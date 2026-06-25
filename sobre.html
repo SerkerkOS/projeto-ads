@@ -5,123 +5,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/theme.css" />
+    <link rel="icon" href="img/ifce-favicon.png" />
     <title>Sobre | ADS</title>
   </head>
   <body>
     <style>
-      .sobre-wrapper {
+      .sobre-page {
+        padding: 3rem 1.5rem 5rem;
+      }
+
+      .sobre-page .container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .sobre-hero {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .sobre-hero h1 {
+        font-size: 2.6rem;
+        color: var(--text);
+        margin-bottom: 1rem;
+      }
+
+      .sobre-hero p {
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        max-width: 650px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+
+      .info-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+        margin-bottom: 4rem;
+      }
+
+      .info-badge {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 3rem;
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 2rem;
-        width: 100%;
+        gap: 0.5rem;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 50px;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
       }
 
-      .sobre-spline {
-        flex: 1;
-        max-width: 420px;
+      .info-badge strong {
+        color: var(--text);
+        font-weight: 600;
       }
 
-      .sobre-spline spline-viewer {
-        width: 100%;
-        height: 360px;
-        display: block;
+      .sobre-section {
+        margin-bottom: 4rem;
       }
 
-      @media (max-width: 768px) {
-        .sobre-wrapper {
-          flex-direction: column;
-          text-align: center;
-          gap: 2rem;
-        }
-        .sobre-spline {
-          max-width: 100%;
-        }
-        .sobre-spline spline-viewer {
-          height: 300px;
-        }
+      .sobre-section h2 {
+        color: var(--text);
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid var(--accent);
+        padding-left: 12px;
       }
 
-      @media (max-width: 480px) {
-        .sobre-spline spline-viewer {
-          height: 240px;
-        }
+      .diferenciais-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
       }
 
-      /* ===== Perfil do Egresso ===== */
+      .diferencial-item {
+        display: flex;
+        gap: 1.2rem;
+        align-items: flex-start;
+        padding: 1.2rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .diferencial-item:last-child {
+        border-bottom: none;
+      }
+
+      .diferencial-item .icon {
+        color: var(--accent);
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+      }
+
+      .diferencial-item h3 {
+        color: var(--text);
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .diferencial-item p {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+
       .egresso {
-        max-width: 1100px;
-        margin: 6rem auto;
-        padding: 0 2rem;
+        margin-top: 4rem;
       }
 
       .egresso-titulo {
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
       }
 
       .egresso-titulo h2 {
         font-size: 2rem;
+        color: var(--text);
         margin-bottom: 1rem;
+        border: none;
+        padding: 0;
       }
 
-      .egresso-titulo .descricao {
+      .egresso-titulo p {
+        max-width: 600px;
         margin: 0 auto;
+        color: var(--text-secondary);
       }
 
-      .cards-egresso {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      .egresso-lista {
+        display: flex;
+        flex-direction: column;
         gap: 1.5rem;
       }
 
-      .card-egresso {
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 16px;
-        padding: 2rem 1.5rem;
-        backdrop-filter: blur(10px);
-        transition:
-          transform 0.3s ease,
-          border-color 0.3s ease,
-          background 0.3s ease;
+      .egresso-item {
+        display: flex;
+        gap: 1.2rem;
+        align-items: flex-start;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 1.5rem;
       }
 
-      .card-egresso:hover {
-        transform: translateY(-6px);
-        border-color: rgba(255, 255, 255, 0.25);
-        background: rgba(255, 255, 255, 0.07);
+      .egresso-item .icon {
+        width: 36px;
+        height: 36px;
+        color: var(--accent);
+        flex-shrink: 0;
+        margin-top: 0.1rem;
       }
 
-      .icone-card {
-        width: 42px;
-        height: 42px;
-        color: #8b5cf6; /* ajuste pra cor principal do seu site */
-        margin-bottom: 1.2rem;
+      .egresso-item h3 {
+        color: var(--text);
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
       }
 
-      .card-egresso h3 {
-        font-size: 1.15rem;
-        margin-bottom: 0.7rem;
-      }
-
-      .card-egresso p {
+      .egresso-item p {
+        color: var(--text-secondary);
         font-size: 0.95rem;
         line-height: 1.6;
-        color: rgba(255, 255, 255, 0.75);
+        margin: 0;
       }
 
-      /* Responsivo */
-      @media (max-width: 600px) {
-        .egresso {
-          margin: 4rem auto;
+      @media (max-width: 768px) {
+        .sobre-hero h1 {
+          font-size: 2rem;
         }
 
-        .cards-egresso {
-          grid-template-columns: 1fr;
+        .info-badges {
+          flex-direction: column;
+          align-items: center;
         }
       }
     </style>
@@ -131,50 +191,40 @@
     <div class="cabecalho">
       <div class="topo">
         <header>
-          <a href="index.html" class="link_l"><h1 class="logo">ADS</h1></a>
+          <a href="index.html" class="link_l"><h1 class="logo"><span class="logo-bracket">&lt;</span>ADS<span class="logo-bracket">/&gt;</span></h1></a>
           <div class="menu">
+            <div class="menu-header-mobile">
+              <button class="menu-back" onclick="toggleMenu()">← Voltar</button>
+            </div>
             <nav>
               <ul class="nav-links">
                 <li class="dropdown">
                   <a href="sobre.html">Sobre</a>
                   <ul class="opcao">
                     <li><a href="colacao.html">Colação</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li class="dropdown-2">
-                      <a href="">Documentação</a>
-                      <ul class="opcao-2">
-                        <li><a href="projetos.html">projetos</a></li>
-                        <li>habilidades</li>
-                        <li>Sobre</li>
-                        <li>IFCE</li>
-                      </ul>
-                    </li>
                   </ul>
                 </li>
                 <li><a href="campus.html">Campus</a></li>
-                <li><a href="">Grade</a></li>
-                <li><a href="">Disciplinas</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
               </ul>
             </nav>
-            <button
-              class="theme-toggle"
-              onclick="toggleTheme()"
-              aria-label="Alternar tema"
-            >
-              <span class="icon-sun">☀️</span><span class="icon-moon">🌙</span>
-            </button>
           </div>
-          <button class="hamburger" onclick="toggleMenu()">☰</button>
-          <a href="ingresso.html" class="btn-signin">Ingressar</a>
+          <div class="header-actions">
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
+            <a href="ingresso.html" class="btn-signin">Ingressar</a>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+          </div>
         </header>
       </div>
     </div>
 
-    <main>
-      <div class="sobre-wrapper">
-        <div class="content" style="margin-top: 6rem">
+    <main class="sobre-page">
+      <div class="container">
+
+        <div class="sobre-hero">
           <h1>Sobre o Curso</h1>
-          <p class="descricao" style="max-width: 600px">
+          <p>
             O curso superior de Tecnologia em Análise e Desenvolvimento de
             Sistemas (ADS) do IFCE Campus Boa Viagem forma profissionais
             preparados para projetar, desenvolver e gerenciar sistemas
@@ -183,127 +233,117 @@
             regional e nacional.
           </p>
         </div>
-        <div class="robot-3d">
-          <script
-            type="module"
-            src="https://unpkg.com/@splinetool/viewer@1.12.97/build/spline-viewer.js"
-          ></script>
-          <spline-viewer
-            url="https://prod.spline.design/mku6wFNqxUKtudfq/scene.splinecode"
-          ></spline-viewer>
+
+        <div class="info-badges">
+          <span class="info-badge">🎓 <strong>Modalidade:</strong> Presencial</span>
+          <span class="info-badge">📅 <strong>Duração:</strong> 2 anos e meio (5 semestres)</span>
+          <span class="info-badge">🕐 <strong>Turno:</strong> Manhã e Noite</span>
+          <span class="info-badge">👥 <strong>Vagas Anuais:</strong> 40 vagas</span>
         </div>
+
+        <div class="sobre-section">
+          <h2>Diferenciais do Curso</h2>
+          <div class="diferenciais-list">
+            <div class="diferencial-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <h3>Estrutura Moderna</h3>
+                <p>Laboratórios equipados, salas com recursos multimídia e ambiente preparado para aprendizado prático desde o primeiro semestre.</p>
+              </div>
+            </div>
+            <div class="diferencial-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <h3>Professores Qualificados</h3>
+                <p>Docentes mestres e doutores com experiência acadêmica e de mercado, atuantes em pesquisa e extensão.</p>
+              </div>
+            </div>
+            <div class="diferencial-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <h3>Pesquisa e Extensão</h3>
+                <p>Projetos de pesquisa aplicada e programas de extensão que conectam os alunos à comunidade e ao mercado regional.</p>
+              </div>
+            </div>
+            <div class="diferencial-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <h3>Projetos Práticos</h3>
+                <p>Desenvolvimento de projetos reais ao longo do curso, com entregas que compõem o portfólio profissional do estudante.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="egresso">
+          <div class="egresso-titulo">
+            <h2>O que você se torna por aqui</h2>
+            <p>
+              Não é só sobre aprender a programar. É sobre sair preparado pra
+              resolver problemas reais, trabalhar em equipe e continuar evoluindo
+              numa área que nunca para de mudar.
+            </p>
+          </div>
+
+          <div class="egresso-lista">
+            <div class="egresso-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" stroke-linecap="round" />
+                <path d="M7 8l3 3-3 3M13 14h4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <div>
+                <h3>Desenvolvedor de Software</h3>
+                <p>Capaz de projetar, construir e manter sistemas do início ao fim — seja um app, uma API ou aquele sistema que a empresa não pode parar de funcionar.</p>
+              </div>
+            </div>
+            <div class="egresso-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 3v18h18" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M7 15l4-5 3 3 5-7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <div>
+                <h3>Analista de Sistemas</h3>
+                <p>Sabe ouvir um problema de negócio e transformar isso em uma solução técnica que realmente funciona — não só no papel, na prática.</p>
+              </div>
+            </div>
+            <div class="egresso-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <ellipse cx="12" cy="5" rx="8" ry="3" />
+                <path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5" stroke-linecap="round" />
+                <path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" stroke-linecap="round" />
+              </svg>
+              <div>
+                <h3>Gestão de Dados e Projetos</h3>
+                <p>Entende de banco de dados, organização de equipes e metodologias ágeis. Sabe planejar antes de sair codando.</p>
+              </div>
+            </div>
+            <div class="egresso-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2c2.5 2.5 4 6 4 9.5 0 1.8-.5 3.3-1.2 4.5l-2.8 4-2.8-4C8.5 14.8 8 13.3 8 11.5 8 8 9.5 4.5 12 2z" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="12" cy="10" r="1.8" />
+                <path d="M9 18l-2 4M15 18l2 4" stroke-linecap="round" />
+              </svg>
+              <div>
+                <h3>Empreendedor Digital</h3>
+                <p>Tem base pra criar o próprio negócio ou produto de tecnologia, do zero, com autonomia pra tirar uma ideia do papel.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
-      <section class="egresso">
-        <div class="egresso-titulo">
-          <h2>O que você se torna por aqui</h2>
-          <p class="descricao" style="max-width: 600px">
-            Não é só sobre aprender a programar. É sobre sair preparado pra
-            resolver problemas reais, trabalhar em equipe e continuar evoluindo
-            numa área que nunca para de mudar.
-          </p>
-        </div>
-
-        <div class="cards-egresso">
-          <div class="card-egresso">
-            <svg
-              class="icone-card"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <rect x="2" y="3" width="20" height="14" rx="2" />
-              <path d="M8 21h8M12 17v4" stroke-linecap="round" />
-              <path
-                d="M7 8l3 3-3 3M13 14h4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <h3>Desenvolvedor de Software</h3>
-            <p>
-              Capaz de projetar, construir e manter sistemas do início ao fim —
-              seja um app, uma API ou aquele sistema que a empresa não pode
-              parar de funcionar.
-            </p>
-          </div>
-
-          <div class="card-egresso">
-            <svg
-              class="icone-card"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path
-                d="M3 3v18h18"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M7 15l4-5 3 3 5-7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <h3>Analista de Sistemas</h3>
-            <p>
-              Sabe ouvir um problema de negócio e transformar isso em uma
-              solução técnica que realmente funciona — não só no papel, na
-              prática.
-            </p>
-          </div>
-
-          <div class="card-egresso">
-            <svg
-              class="icone-card"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <ellipse cx="12" cy="5" rx="8" ry="3" />
-              <path
-                d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"
-                stroke-linecap="round"
-              />
-              <path
-                d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"
-                stroke-linecap="round"
-              />
-            </svg>
-            <h3>Gestão de Dados e Projetos</h3>
-            <p>
-              Entende de banco de dados, organização de equipes e metodologias
-              ágeis. Sabe planejar antes de sair codando.
-            </p>
-          </div>
-
-          <div class="card-egresso">
-            <svg
-              class="icone-card"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path
-                d="M12 2c2.5 2.5 4 6 4 9.5 0 1.8-.5 3.3-1.2 4.5l-2.8 4-2.8-4C8.5 14.8 8 13.3 8 11.5 8 8 9.5 4.5 12 2z"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <circle cx="12" cy="10" r="1.8" />
-              <path d="M9 18l-2 4M15 18l2 4" stroke-linecap="round" />
-            </svg>
-            <h3>Empreendedor Digital</h3>
-            <p>
-              Tem base pra criar o próprio negócio ou produto de tecnologia, do
-              zero, com autonomia pra tirar uma ideia do papel.
-            </p>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer>
@@ -318,14 +358,17 @@
         </div>
         <div>
           <h4>Navegação</h4>
-          <a href="index.html">Início</a>
-          <a href="sobre.html">Sobre o Curso</a>
-          <a href="grade.html">Grade Curricular</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="campus.html">Campus</a>
+          <a href="ingresso.html">Ingresso</a>
+          <a href="contato.html">Contato</a>
+          <a href="colacao.html">Colação</a>
           <a href="projetos.html">Projetos</a>
         </div>
         <div>
           <h4>Contato</h4>
           <a href="contato.html">Fale Conosco</a>
+          <a href="https://www.instagram.com/ifceboaviagemoficial/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg> Instagram</a>
           <p>
             Rodovia Presidente Juscelino Kubitschek, BR 020, Km 209<br />Boa
             Viagem - CE
@@ -340,8 +383,32 @@
 
     <script>
       function toggleMenu() {
-        document.querySelector("nav").classList.toggle("active");
+        const menu = document.querySelector('.menu');
+        const hamburger = document.querySelector('.hamburger');
+        const isOpen = menu.classList.toggle('active');
+        hamburger.textContent = isOpen ? '✕' : '☰';
+        document.body.style.overflow = isOpen ? 'hidden' : '';
       }
+
+      document.querySelectorAll('.dropdown > a, .dropdown-2 > a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.parentElement.classList.toggle('open');
+          }
+        });
+      });
+
+      document.querySelectorAll('.nav-links a:not(.dropdown > a, .dropdown-2 > a)').forEach(link => {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 768) {
+            const menu = document.querySelector('.menu');
+            menu.classList.remove('active');
+            document.querySelector('.hamburger').textContent = '☰';
+            document.body.style.overflow = '';
+          }
+        });
+      });
       function toggleTheme() {
         const html = document.documentElement;
         const theme =

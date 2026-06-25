@@ -1,11 +1,11 @@
 @import url(reset.css);
-@import url(resposivo.css);
 @import url(navbar.css);
 @import url(main.css);
 @import url(header.css);
 @import url(elementos-3d.css);
 @import url(buttons.css);
 @import url(footer.css);
+@import url(resposivo.css);
 .topo {
   position: relative;
 }

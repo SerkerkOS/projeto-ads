@@ -38,6 +38,11 @@ footer a {
   transition: color 0.2s;
 }
 
+footer a svg {
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
 footer a:hover {
   color: #e7e7e7;
 }
