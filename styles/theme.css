@@ -1,0 +1,191 @@
+:root {
+  --bg: #0a0a0a;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-card-hover: rgba(255, 255, 255, 0.07);
+  --text: #e7e7e7;
+  --text-secondary: #a0a0a0;
+  --text-muted: #777;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.15);
+  --nav-bg: rgba(80, 80, 80, 0.2);
+  --nav-border: rgba(255, 255, 255, 0.12);
+  --dropdown-bg: rgba(15, 15, 15, 0.92);
+  --btn-signin-bg: #7f42a7;
+  --btn-signin-text: white;
+  --btn-signin-hover: #6a35a0;
+  --footer-bg: #050505;
+  --footer-border: rgba(255, 255, 255, 0.06);
+  --layer-blur-shadow: rgba(127, 66, 167, 0.15);
+  --tag-bg: #0a0a0a;
+  --input-bg: rgba(255, 255, 255, 0.06);
+  --input-border: rgba(255, 255, 255, 0.1);
+  --input-text: #fff;
+  --accent: #7f42a7;
+  --accent-hover: #6a35a0;
+}
+
+[data-theme="light"] {
+  --bg: #f0f0f5;
+  --bg-card: rgba(0, 0, 0, 0.04);
+  --bg-card-hover: rgba(0, 0, 0, 0.08);
+  --text: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-muted: #555;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.15);
+  --nav-bg: rgba(200, 200, 210, 0.5);
+  --nav-border: rgba(0, 0, 0, 0.1);
+  --dropdown-bg: rgba(255, 255, 255, 0.95);
+  --btn-signin-bg: #7f42a7;
+  --btn-signin-text: white;
+  --btn-signin-hover: #6a35a0;
+  --footer-bg: #e0e0e8;
+  --footer-border: rgba(0, 0, 0, 0.08);
+  --layer-blur-shadow: rgba(127, 66, 167, 0.08);
+  --tag-bg: #f0f0f5;
+  --input-bg: rgba(0, 0, 0, 0.04);
+  --input-border: rgba(0, 0, 0, 0.12);
+  --input-text: #1d1d1f;
+  --accent: #7f42a7;
+  --accent-hover: #6a35a0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a { color: var(--text); text-decoration: none; }
+
+nav {
+  background-color: var(--nav-bg) !important;
+  border-color: var(--nav-border) !important;
+}
+
+.opcao { background-color: var(--dropdown-bg) !important; backdrop-filter: blur(20px) !important; }
+.opcao-2 { background-color: var(--dropdown-bg) !important; backdrop-filter: blur(20px) !important; }
+
+.btn-signin {
+  background-color: var(--btn-signin-bg) !important;
+  color: var(--btn-signin-text) !important;
+}
+.btn-signin:hover { background-color: var(--btn-signin-hover) !important; }
+
+footer { background-color: var(--footer-bg) !important; border-top-color: var(--footer-border) !important; }
+footer h4 { color: var(--text) !important; }
+footer a, footer p { color: var(--text-secondary) !important; }
+footer a:hover { color: var(--accent) !important; }
+footer .copy { color: var(--text-muted) !important; border-top-color: var(--footer-border) !important; }
+
+.imagem-gradiente { display: none; }
+.layer-blur {
+  box-shadow: 0 0 700px 15px var(--layer-blur-shadow) !important;
+  opacity: 0.6;
+}
+
+.card-item { background: var(--bg-card) !important; border-color: var(--border) !important; }
+.card-item:hover { background: var(--bg-card-hover) !important; border-color: var(--accent) !important; }
+.card-item h3 { color: var(--text) !important; }
+.card-item p { color: var(--text-muted) !important; }
+.card-tag { border-top-color: var(--border) !important; }
+
+.card-egresso { background: var(--bg-card) !important; border-color: var(--border) !important; }
+.card-egresso:hover { border-color: var(--accent) !important; }
+.card-egresso h3, .card-egresso p, .card-egresso .egresso-curso { color: var(--text) !important; }
+.card-egresso p { color: var(--text-secondary) !important; }
+
+.contato-card { background: var(--bg-card) !important; border-color: var(--border) !important; }
+.contato-card:hover { background: var(--bg-card-hover) !important; border-color: var(--accent) !important; }
+.contato-card h3 { color: var(--text) !important; }
+.contato-card p { color: var(--text-secondary) !important; }
+
+.contato-form { background: var(--bg-card) !important; border-color: var(--border) !important; }
+.contato-form h2 { color: var(--text) !important; }
+
+.form-group input, .form-group textarea {
+  color: var(--input-text) !important;
+  background: var(--input-bg) !important;
+  border-color: var(--input-border) !important;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  border-color: var(--accent) !important;
+}
+
+.page-hero h1 { color: var(--text) !important; }
+.page-hero p { color: var(--text-secondary) !important; }
+
+.campus-text h2 { color: var(--text) !important; }
+.campus-text p { color: var(--text-muted) !important; }
+
+.infra-section h2 { color: var(--text) !important; }
+.infra-item { background: var(--bg-card) !important; border-color: var(--border) !important; }
+.infra-item:hover { border-color: var(--accent) !important; }
+.infra-item h3 { color: var(--text) !important; }
+.infra-item p { color: var(--text-muted) !important; }
+
+.contato-hero h1 { color: var(--text) !important; }
+.contato-hero p { color: var(--text-secondary) !important; }
+
+.content h1 { color: var(--text) !important; }
+.descricao { color: var(--text-muted) !important; }
+
+.tag-box .tag { background-color: var(--tag-bg) !important; }
+
+.container-conteudo { background: var(--bg-card) !important; border: 1px solid var(--border) !important; }
+.titulo-principal { color: var(--text) !important; }
+.titulo-secao { color: var(--text) !important; }
+.subtitulo { color: var(--text-secondary) !important; }
+.lista-ingresso li { color: var(--text-secondary) !important; }
+.info-link { color: var(--text-secondary) !important; }
+.nota-corte { color: var(--text-secondary) !important; }
+.tabela-pesos th { background-color: var(--bg) !important; color: var(--text) !important; }
+.tabela-pesos td { color: var(--text) !important; }
+.tabela-pesos tr:nth-child(even) { background-color: var(--bg-card) !important; }
+.tabela-pesos, .tabela-pesos th, .tabela-pesos td { border-color: var(--border) !important; }
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text);
+  padding: 0.4rem;
+  line-height: 1;
+  transition: opacity 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+}
+.theme-toggle:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  border-color: var(--accent);
+}
+
+[data-theme="light"] .theme-toggle .icon-moon { display: inline; }
+[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: none; }
+.theme-toggle .icon-sun { display: inline; }
+
+.btn-get-started {
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+.btn-get-started:hover {
+  background-color: var(--bg-card) !important;
+}
+
+.btn-signing-main {
+  color: var(--text) !important;
+}
+
+li:hover {
+  background-color: rgba(127, 66, 167, 0.15) !important;
+}

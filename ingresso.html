@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/theme.css">
   <title>Formas de Ingresso | ADS - IFCE Boa Viagem</title>
 </head>
 
@@ -108,20 +109,20 @@
     <div class="topo">
       <header>
         <!-- Cuidado quando for mexer aqui me avisa antes-->
-        <h1 class="logo">ADS</h1>
+        <a href="index.html" class="link_l"><h1 class="logo">ADS</h1></a>
         <!---Navbar-->
         <div class="menu">
           <nav>
             <ul class="nav-links">
               <li class="dropdown">
-                <a href="">Sobre</a>
+                <a href="sobre.html">Sobre</a>
                 <ul class="opcao">
-                  <li><a href="">Colação</a></li>
-                  <li><a href=""></a></li>
+                  <li><a href="colacao.html">Colação</a></li>
+                  <li><a href="contato.html">Contato</a></li>
                   <li class="dropdown-2">
                     <a href="">Documentação</a>
                     <ul class="opcao-2">
-                      <li>projetos</li>
+                      <li><a href="projetos.html">projetos</a></li>
                       <li>habilidades</li>
                       <li>Sobre</li>
                       <li>IFCE</li>
@@ -129,14 +130,15 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="">Campus</a></li>
+              <li><a href="campus.html">Campus</a></li>
               <li><a href="">Grade</a></li>
               <li><a href="">Disciplinas</a></li>
             </ul>
           </nav>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
         </div>
         <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <button class="btn-signin">Ingressar</button>
+        <a href="ingresso.html" class="btn-signin">Ingressar</a>
       </header>
     </div>
   </div>
@@ -254,5 +256,18 @@
     </div>
   </footer>
 
+<script>
+  function toggleMenu() {
+    document.querySelector('nav').classList.toggle('active');
+  }
+  function toggleTheme() {
+    const html = document.documentElement;
+    const theme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    html.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 </body>
 </html>

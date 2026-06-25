@@ -9,6 +9,9 @@ nav {
 }
 .menu {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 18px;
 }
 .nav-links {

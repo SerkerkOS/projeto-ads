@@ -8,6 +8,8 @@
   font-weight: 500;
   transition: background-color 0.2s ease;
   cursor: pointer;
+  text-decoration: none !important;
+  display: inline-block;
 }
 
 .btn-signin:hover {

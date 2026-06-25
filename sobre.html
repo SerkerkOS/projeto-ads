@@ -1,85 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/theme.css" />
     <title>Sobre | ADS</title>
-</head>
-<body>
+  </head>
+  <body>
     <style>
-        /* ===== Perfil do Egresso ===== */
-        .egresso {
-          max-width: 1100px;
-          margin: 6rem auto;
-          padding: 0 2rem;
-        }
-        
-        .egresso-titulo {
+      .sobre-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+        width: 100%;
+      }
+
+      .sobre-spline {
+        flex: 1;
+        max-width: 420px;
+      }
+
+      .sobre-spline spline-viewer {
+        width: 100%;
+        height: 360px;
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .sobre-wrapper {
+          flex-direction: column;
           text-align: center;
-          margin-bottom: 3rem;
+          gap: 2rem;
         }
-        
-        .egresso-titulo h2 {
-          font-size: 2rem;
-          margin-bottom: 1rem;
+        .sobre-spline {
+          max-width: 100%;
         }
-        
-        .egresso-titulo .descricao {
-          margin: 0 auto;
+        .sobre-spline spline-viewer {
+          height: 300px;
         }
-        
+      }
+
+      @media (max-width: 480px) {
+        .sobre-spline spline-viewer {
+          height: 240px;
+        }
+      }
+
+      /* ===== Perfil do Egresso ===== */
+      .egresso {
+        max-width: 1100px;
+        margin: 6rem auto;
+        padding: 0 2rem;
+      }
+
+      .egresso-titulo {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .egresso-titulo h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .egresso-titulo .descricao {
+        margin: 0 auto;
+      }
+
+      .cards-egresso {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .card-egresso {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 2rem 1.5rem;
+        backdrop-filter: blur(10px);
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease,
+          background 0.3s ease;
+      }
+
+      .card-egresso:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.07);
+      }
+
+      .icone-card {
+        width: 42px;
+        height: 42px;
+        color: #8b5cf6; /* ajuste pra cor principal do seu site */
+        margin-bottom: 1.2rem;
+      }
+
+      .card-egresso h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .card-egresso p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      /* Responsivo */
+      @media (max-width: 600px) {
+        .egresso {
+          margin: 4rem auto;
+        }
+
         .cards-egresso {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-          gap: 1.5rem;
+          grid-template-columns: 1fr;
         }
-        
-        .card-egresso {
-          background: rgba(255, 255, 255, 0.04);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          border-radius: 16px;
-          padding: 2rem 1.5rem;
-          backdrop-filter: blur(10px);
-          transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-        }
-        
-        .card-egresso:hover {
-          transform: translateY(-6px);
-          border-color: rgba(255, 255, 255, 0.25);
-          background: rgba(255, 255, 255, 0.07);
-        }
-        
-        .icone-card {
-          width: 42px;
-          height: 42px;
-          color: #8b5cf6; /* ajuste pra cor principal do seu site */
-          margin-bottom: 1.2rem;
-        }
-        
-        .card-egresso h3 {
-          font-size: 1.15rem;
-          margin-bottom: 0.7rem;
-        }
-        
-        .card-egresso p {
-          font-size: 0.95rem;
-          line-height: 1.6;
-          color: rgba(255, 255, 255, 0.75);
-        }
-        
-        /* Responsivo */
-        @media (max-width: 600px) {
-          .egresso {
-            margin: 4rem auto;
-          }
-        
-          .cards-egresso {
-            grid-template-columns: 1fr;
-          }
-        }
+      }
     </style>
-    
+
     <img class="imagem-gradiente" src="gradient.png" alt="gradiente" />
     <div class="layer-blur"></div>
     <div class="cabecalho">
@@ -110,84 +156,154 @@
                 <li><a href="">Disciplinas</a></li>
               </ul>
             </nav>
+            <button
+              class="theme-toggle"
+              onclick="toggleTheme()"
+              aria-label="Alternar tema"
+            >
+              <span class="icon-sun">☀️</span><span class="icon-moon">🌙</span>
+            </button>
           </div>
           <button class="hamburger" onclick="toggleMenu()">☰</button>
-          <button class="btn-signin">Ingressar</button>
+          <a href="ingresso.html" class="btn-signin">Ingressar</a>
         </header>
       </div>
     </div>
 
     <main>
-      <div class="content" style="margin-top: 6rem;">
-        <h1>Sobre o Curso</h1>
-        <p class="descricao" style="max-width: 600px;">
-          O curso de Análise e Desenvolvimento de Sistemas do IFCE Campus Boa Viagem forma profissionais capacitados para atuar no desenvolvimento de software, análise de sistemas e gestão de projetos de tecnologia.
-        </p>
+      <div class="sobre-wrapper">
+        <div class="content" style="margin-top: 6rem">
+          <h1>Sobre o Curso</h1>
+          <p class="descricao" style="max-width: 600px">
+            O curso superior de Tecnologia em Análise e Desenvolvimento de
+            Sistemas (ADS) do IFCE Campus Boa Viagem forma profissionais
+            preparados para projetar, desenvolver e gerenciar sistemas
+            computacionais. Com foco em tecnologia, inovação e empreendedorismo,
+            o curso combina teoria e prática para atender às demandas do mercado
+            regional e nacional.
+          </p>
+        </div>
+        <div class="robot-3d">
+          <script
+            type="module"
+            src="https://unpkg.com/@splinetool/viewer@1.12.97/build/spline-viewer.js"
+          ></script>
+          <spline-viewer
+            url="https://prod.spline.design/mku6wFNqxUKtudfq/scene.splinecode"
+          ></spline-viewer>
+        </div>
       </div>
-        <section class="egresso">
-              <div class="egresso-titulo">
-                <h2>O que você se torna por aqui</h2>
-                <p class="descricao" style="max-width: 600px;">
-                  Não é só sobre aprender a programar. É sobre sair preparado pra resolver
-                  problemas reais, trabalhar em equipe e continuar evoluindo numa área que
-                  nunca para de mudar.
-                </p>
-              </div>
-            
-              <div class="cards-egresso">
-                <div class="card-egresso">
-                  <svg class="icone-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <rect x="2" y="3" width="20" height="14" rx="2"/>
-                    <path d="M8 21h8M12 17v4" stroke-linecap="round"/>
-                    <path d="M7 8l3 3-3 3M13 14h4" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <h3>Desenvolvedor de Software</h3>
-                  <p>
-                    Capaz de projetar, construir e manter sistemas do início ao fim —
-                    seja um app, uma API ou aquele sistema que a empresa não pode parar
-                    de funcionar.
-                  </p>
-                </div>
-            
-                <div class="card-egresso">
-                  <svg class="icone-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M3 3v18h18" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7 15l4-5 3 3 5-7" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <h3>Analista de Sistemas</h3>
-                  <p>
-                    Sabe ouvir um problema de negócio e transformar isso em uma solução
-                    técnica que realmente funciona — não só no papel, na prática.
-                  </p>
-                </div>
-            
-                <div class="card-egresso">
-                  <svg class="icone-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <ellipse cx="12" cy="5" rx="8" ry="3"/>
-                    <path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5" stroke-linecap="round"/>
-                    <path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" stroke-linecap="round"/>
-                  </svg>
-                  <h3>Gestão de Dados e Projetos</h3>
-                  <p>
-                    Entende de banco de dados, organização de equipes e metodologias
-                    ágeis. Sabe planejar antes de sair codando.
-                  </p>
-                </div>
-            
-                <div class="card-egresso">
-                  <svg class="icone-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M12 2c2.5 2.5 4 6 4 9.5 0 1.8-.5 3.3-1.2 4.5l-2.8 4-2.8-4C8.5 14.8 8 13.3 8 11.5 8 8 9.5 4.5 12 2z" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="12" cy="10" r="1.8"/>
-                    <path d="M9 18l-2 4M15 18l2 4" stroke-linecap="round"/>
-                  </svg>
-                  <h3>Empreendedor Digital</h3>
-                  <p>
-                    Tem base pra criar o próprio negócio ou produto de tecnologia, do
-                    zero, com autonomia pra tirar uma ideia do papel.
-                  </p>
-                </div>
-              </div>
-        </section>
+      <section class="egresso">
+        <div class="egresso-titulo">
+          <h2>O que você se torna por aqui</h2>
+          <p class="descricao" style="max-width: 600px">
+            Não é só sobre aprender a programar. É sobre sair preparado pra
+            resolver problemas reais, trabalhar em equipe e continuar evoluindo
+            numa área que nunca para de mudar.
+          </p>
+        </div>
+
+        <div class="cards-egresso">
+          <div class="card-egresso">
+            <svg
+              class="icone-card"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" stroke-linecap="round" />
+              <path
+                d="M7 8l3 3-3 3M13 14h4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <h3>Desenvolvedor de Software</h3>
+            <p>
+              Capaz de projetar, construir e manter sistemas do início ao fim —
+              seja um app, uma API ou aquele sistema que a empresa não pode
+              parar de funcionar.
+            </p>
+          </div>
+
+          <div class="card-egresso">
+            <svg
+              class="icone-card"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                d="M3 3v18h18"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7 15l4-5 3 3 5-7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <h3>Analista de Sistemas</h3>
+            <p>
+              Sabe ouvir um problema de negócio e transformar isso em uma
+              solução técnica que realmente funciona — não só no papel, na
+              prática.
+            </p>
+          </div>
+
+          <div class="card-egresso">
+            <svg
+              class="icone-card"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <ellipse cx="12" cy="5" rx="8" ry="3" />
+              <path
+                d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"
+                stroke-linecap="round"
+              />
+            </svg>
+            <h3>Gestão de Dados e Projetos</h3>
+            <p>
+              Entende de banco de dados, organização de equipes e metodologias
+              ágeis. Sabe planejar antes de sair codando.
+            </p>
+          </div>
+
+          <div class="card-egresso">
+            <svg
+              class="icone-card"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                d="M12 2c2.5 2.5 4 6 4 9.5 0 1.8-.5 3.3-1.2 4.5l-2.8 4-2.8-4C8.5 14.8 8 13.3 8 11.5 8 8 9.5 4.5 12 2z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="12" cy="10" r="1.8" />
+              <path d="M9 18l-2 4M15 18l2 4" stroke-linecap="round" />
+            </svg>
+            <h3>Empreendedor Digital</h3>
+            <p>
+              Tem base pra criar o próprio negócio ou produto de tecnologia, do
+              zero, com autonomia pra tirar uma ideia do papel.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -224,8 +340,18 @@
 
     <script>
       function toggleMenu() {
-        document.querySelector('nav').classList.toggle('active');
+        document.querySelector("nav").classList.toggle("active");
       }
+      function toggleTheme() {
+        const html = document.documentElement;
+        const theme =
+          html.getAttribute("data-theme") === "light" ? "dark" : "light";
+        html.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+      }
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme)
+        document.documentElement.setAttribute("data-theme", savedTheme);
     </script>
-</body>
+  </body>
 </html>

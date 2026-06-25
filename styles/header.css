@@ -30,3 +30,24 @@ header h1 {
   font-size: 2rem;
   cursor: pointer;
 }
+
+@media (min-width: 769px) {
+  header {
+    justify-content: center;
+  }
+
+  header > a:first-child {
+    position: absolute;
+    left: 5rem;
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 10rem;
+  }
+
+  .btn-signin {
+    position: absolute;
+    right: 5rem;
+  }
+}

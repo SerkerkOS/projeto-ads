@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/theme.css">
     <title>Projetos | ADS</title>
 </head>
 <body>
@@ -37,9 +38,10 @@
                 <li><a href="">Disciplinas</a></li>
               </ul>
             </nav>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
           </div>
           <button class="hamburger" onclick="toggleMenu()">☰</button>
-          <button class="btn-signin">Ingressar</button>
+          <a href="ingresso.html" class="btn-signin">Ingressar</a>
         </header>
       </div>
     </div>
@@ -113,6 +115,14 @@
       function toggleMenu() {
         document.querySelector('nav').classList.toggle('active');
       }
+      function toggleTheme() {
+        const html = document.documentElement;
+        const theme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+      }
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
 </body>
 </html>
