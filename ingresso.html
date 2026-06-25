@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Formas de Ingresso | ADS - IFCE Boa Viagem</title>
+</head>
+
+<body>
+  <style>
+        /* ====================== INGRESSO PAGE ====================== */
+
+    .titulo-principal {
+      text-align: center;
+      margin: 40px 0;
+      font-size: 2.6rem;
+      color: #ffffff;
+    }
+
+    .container-conteudo {
+      max-width: 1000px;
+      margin: 25px auto;
+      background: #1a1a1a;
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    }
+
+    .titulo-secao {
+      color: #ffffff;
+      margin-bottom: 15px;
+      border-left: 4px solid #555;
+      padding-left: 10px;
+    }
+
+    .subtitulo {
+      color: #cccccc;
+      margin: 20px 0 10px;
+    }
+
+    .lista-ingresso {
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+
+    .lista-ingresso li {
+      margin-bottom: 8px;
+    }
+
+    .info-link {
+      margin: 15px 0;
+      color: #dddddd;
+    }
+
+    .nota-corte {
+      font-size: 1.1rem;
+      color: #dddddd;
+      margin: 15px 0;
+    }
+
+    .tabela-pesos {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .tabela-pesos th {
+      background-color: #0f0f0f;
+      color: white;
+      padding: 14px;
+    }
+
+    .tabela-pesos td {
+      padding: 12px;
+      text-align: center;
+      color: #e6e6e6;
+    }
+
+    .tabela-pesos tr:nth-child(even) {
+      background-color: #222;
+    }
+
+    .tabela-pesos, .tabela-pesos th, .tabela-pesos td {
+      border: 1px solid #333;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .titulo-principal {
+        font-size: 2rem;
+      }
+
+      .container-conteudo {
+        margin: 15px;
+        padding: 20px;
+      }
+
+      .tabela-pesos {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+  <div class="cabecalho">
+    <div class="topo">
+      <header>
+        <!-- Cuidado quando for mexer aqui me avisa antes-->
+        <h1 class="logo">ADS</h1>
+        <!---Navbar-->
+        <div class="menu">
+          <nav>
+            <ul class="nav-links">
+              <li class="dropdown">
+                <a href="">Sobre</a>
+                <ul class="opcao">
+                  <li><a href="">Colação</a></li>
+                  <li><a href=""></a></li>
+                  <li class="dropdown-2">
+                    <a href="">Documentação</a>
+                    <ul class="opcao-2">
+                      <li>projetos</li>
+                      <li>habilidades</li>
+                      <li>Sobre</li>
+                      <li>IFCE</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="">Campus</a></li>
+              <li><a href="">Grade</a></li>
+              <li><a href="">Disciplinas</a></li>
+            </ul>
+          </nav>
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <button class="btn-signin">Ingressar</button>
+      </header>
+    </div>
+  </div>
+
+  <h1 class="titulo-principal">Formas de Ingresso</h1>
+
+  <div class="container-conteudo">
+    <h2 class="titulo-secao">1. Ingresso pelo SISU</h2>
+
+    <h3 class="subtitulo">Como ingressar por meio do SISU</h3>
+
+    <ul class="lista-ingresso">
+      <li>Realizar o ENEM.</li>
+      <li>Inscrever-se no SISU.</li>
+      <li>Escolher ADS no IFCE Boa Viagem.</li>
+      <li>Selecionar ampla concorrência ou cotas.</li>
+      <li>Acompanhar a classificação.</li>
+      <li>Efetuar matrícula caso aprovado.</li>
+    </ul>
+
+    <p class="info-link">
+      Para mais informações e acesso ao processo seletivo, consulte o 
+      <a href="https://acessounico.mec.gov.br/sisu" target="_blank">Portal Oficial do SISU</a>.
+    </p>
+
+    <h3 class="subtitulo">Pesos das Notas do ENEM</h3>
+
+    <table class="tabela-pesos">
+      <tr>
+        <th>Área</th>
+        <th>Peso</th>
+      </tr>
+      <tr>
+        <td>Matemática</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Linguagens</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Ciências da Natureza</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Redação</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Ciências Humanas</td>
+        <td>1</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container-conteudo">
+    <p class="nota-corte"><strong>Nota de corte:</strong> aproximadamente 630 pontos na ampla concorrência.</p>
+    <p>Caso não seja aprovado na chamada regular, é possível participar da lista de espera.</p>
+  </div>
+
+  <div class="container-conteudo">
+    <h2 class="titulo-secao">2. Transferência Externa</h2>
+
+    <p>Destinada a estudantes matriculados em outras instituições de ensino superior.</p>
+
+    <ul class="lista-ingresso">
+      <li>Participar do edital de transferência.</li>
+      <li>Apresentar histórico escolar.</li>
+      <li>Passar pela análise curricular.</li>
+      <li>Concorrer às vagas disponíveis.</li>
+    </ul>
+  </div>
+
+  <div class="container-conteudo">
+    <h2 class="titulo-secao">3. Reingresso</h2>
+
+    <p>Opção para ex-alunos que interromperam seus estudos e desejam retornar.</p>
+
+    <ul class="lista-ingresso">
+      <li>Participar de edital de reingresso.</li>
+      <li>Comprovar vínculo acadêmico anterior.</li>
+      <li>Concorrer às vagas disponíveis.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div>
+        <h4>IFCE Campus Boa Viagem</h4>
+        <p>
+          Curso Superior em Análise e Desenvolvimento de Sistemas. Formando
+          profissionais para a transformação digital do sertão central
+          cearense.
+        </p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre o Curso</a>
+        <a href="grade.html">Grade Curricular</a>
+        <a href="projetos.html">Projetos</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <a href="contato.html">Fale Conosco</a>
+        <p>
+          Rodovia Presidente Juscelino Kubitschek, BR 020, Km 209<br />Boa
+          Viagem - CE
+        </p>
+      </div>
+      <div class="copy">
+        © 2026 Portfólio ADS — IFCE Campus Boa Viagem. Todos os direitos
+        reservados.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
