@@ -27,8 +27,8 @@ a {
 }
 .opcao {
   position: absolute;
-  padding: 1em 0.5em;
-  margin: 0.6em -3em;
+  padding: 2em 0.5em 1em;
+  margin: -0.5em -3em;
   color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.44);
   backdrop-filter: blur(10px);
@@ -48,18 +48,19 @@ li {
 li:hover {
   background-color: rgba(0, 0, 0, 0.505);
 }
-li:hover .opcao {
+.dropdown:hover .opcao,
+.dropdown-2:hover .opcao-2 {
   display: block;
 }
 .opcao-2 {
   position: absolute;
-  padding: 0.5em 0.5em;
-  margin: -2.5em 12.2em;
+  padding: 0.5em;
+  margin: -2.8em 12.5em;
   color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.454);
   backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.215);
-  border-radius: 2em;
+  border-radius: 1em;
   display: none;
 }
 .dropdown-2:hover .opcao-2 {
