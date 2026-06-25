@@ -7,6 +7,79 @@
     <title>Sobre | ADS</title>
 </head>
 <body>
+    <style>
+        /* ===== Perfil do Egresso ===== */
+        .egresso {
+          max-width: 1100px;
+          margin: 6rem auto;
+          padding: 0 2rem;
+        }
+        
+        .egresso-titulo {
+          text-align: center;
+          margin-bottom: 3rem;
+        }
+        
+        .egresso-titulo h2 {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+        
+        .egresso-titulo .descricao {
+          margin: 0 auto;
+        }
+        
+        .cards-egresso {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 1.5rem;
+        }
+        
+        .card-egresso {
+          background: rgba(255, 255, 255, 0.04);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 16px;
+          padding: 2rem 1.5rem;
+          backdrop-filter: blur(10px);
+          transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+        }
+        
+        .card-egresso:hover {
+          transform: translateY(-6px);
+          border-color: rgba(255, 255, 255, 0.25);
+          background: rgba(255, 255, 255, 0.07);
+        }
+        
+        .icone-card {
+          width: 42px;
+          height: 42px;
+          color: #8b5cf6; /* ajuste pra cor principal do seu site */
+          margin-bottom: 1.2rem;
+        }
+        
+        .card-egresso h3 {
+          font-size: 1.15rem;
+          margin-bottom: 0.7rem;
+        }
+        
+        .card-egresso p {
+          font-size: 0.95rem;
+          line-height: 1.6;
+          color: rgba(255, 255, 255, 0.75);
+        }
+        
+        /* Responsivo */
+        @media (max-width: 600px) {
+          .egresso {
+            margin: 4rem auto;
+          }
+        
+          .cards-egresso {
+            grid-template-columns: 1fr;
+          }
+        }
+    </style>
+    
     <img class="imagem-gradiente" src="gradient.png" alt="gradiente" />
     <div class="layer-blur"></div>
     <div class="cabecalho">
