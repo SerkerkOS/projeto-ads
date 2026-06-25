@@ -1,1 +1,94 @@
-//colacao de grau page
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Colação de Grau | ADS</title>
+</head>
+<body>
+    <img class="imagem-gradiente" src="gradient.png" alt="gradiente" />
+    <div class="layer-blur"></div>
+    <div class="cabecalho">
+      <div class="topo">
+        <header>
+          <a href="index.html" class="link_l"><h1 class="logo">ADS</h1></a>
+          <div class="menu">
+            <nav>
+              <ul class="nav-links">
+                <li class="dropdown">
+                  <a href="sobre.html">Sobre</a>
+                  <ul class="opcao">
+                    <li><a href="colacao.html">Colação</a></li>
+                    <li><a href=""></a></li>
+                    <li class="dropdown-2">
+                      <a href="">Documentação</a>
+                      <ul class="opcao-2">
+                        <li><a href="projetos.html">projetos</a></li>
+                        <li>habilidades</li>
+                        <li>Sobre</li>
+                        <li>IFCE</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="campus.html">Campus</a></li>
+                <li><a href="">Grade</a></li>
+                <li><a href="">Disciplinas</a></li>
+              </ul>
+            </nav>
+          </div>
+          <button class="hamburger" onclick="toggleMenu()">☰</button>
+          <button class="btn-signin">Ingressar</button>
+        </header>
+      </div>
+    </div>
+
+    <main>
+      <div class="content" style="margin-top: 6rem;">
+        <h1>Colação de Grau</h1>
+        <p class="descricao" style="max-width: 600px;">
+          Informações sobre a cerimônia de colação de grau do curso de Análise e Desenvolvimento de Sistemas.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div>
+          <h4>IFCE Campus Boa Viagem</h4>
+          <p>
+            Curso Superior em Análise e Desenvolvimento de Sistemas. Formando
+            profissionais para a transformação digital do sertão central
+            cearense.
+          </p>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <a href="index.html">Início</a>
+          <a href="sobre.html">Sobre o Curso</a>
+          <a href="grade.html">Grade Curricular</a>
+          <a href="projetos.html">Projetos</a>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <a href="contato.html">Fale Conosco</a>
+          <p>
+            Rodovia Presidente Juscelino Kubitschek, BR 020, Km 209<br />Boa
+            Viagem - CE
+          </p>
+        </div>
+        <div class="copy">
+          © 2026 Portfólio ADS — IFCE Campus Boa Viagem. Todos os direitos
+          reservados.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector('nav').classList.toggle('active');
+      }
+    </script>
+</body>
+</html>
