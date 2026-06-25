@@ -121,19 +121,47 @@
       <form class="contato-form">
         <h2>Envie sua mensagem</h2>
         <div class="form-group">
-          <input type="text" id="nome" placeholder=" " required />
+          <input
+            type="text"
+            id="nome"
+            placeholder=" "
+            minlenght="3"
+            maxleght="20"
+            required
+          />
           <label for="nome">Nome</label>
         </div>
         <div class="form-group">
-          <input type="email" id="email" placeholder=" " required />
+          <input
+            type="email"
+            id="email"
+            placeholder=" "
+            minlenght="3"
+            maxleght="20"
+            required
+          />
           <label for="email">E-mail</label>
         </div>
         <div class="form-group">
-          <input type="text" id="assunto" placeholder=" " required />
+          <input
+            type="text"
+            id="assunto"
+            placeholder=" "
+            minlenght="3"
+            maxleght="20"
+            required
+          />
           <label for="assunto">Assunto</label>
         </div>
         <div class="form-group">
-          <textarea id="mensagem" rows="5" placeholder=" " required></textarea>
+          <textarea
+            id="mensagem"
+            rows="5"
+            placeholder=" "
+            minlenght="10"
+            maxleght="300"
+            required
+          ></textarea>
           <label for="mensagem">Mensagem</label>
         </div>
         <button type="submit" class="btn-contato">Enviar mensagem</button>
@@ -175,6 +203,22 @@
     <script>
       function toggleMenu() {
         document.querySelector("nav").classList.toggle("active");
+      }
+      function verificarGmail() {
+        const email = document.getElementById("email").value.trim();
+        const mensagem = document.getElementById("mensagem");
+
+        // Regex para validar formato e domínio Gmail
+        const regex = /^[a-zA-Z0-9._%+-]+@gmail.com$/;
+
+        if (regex.test(email)) {
+          mensagem.textContent = "E-mail válido!";
+          mensagem.className = "sucesso";
+        } else {
+          mensagem.textContent =
+            "Por favor, insira um Gmail válido (ex: usuario@gmail.com).";
+          mensagem.className = "erro";
+        }
       }
     </script>
   </body>
