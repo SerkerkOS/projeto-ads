@@ -1,107 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <title>ADS | Projetos</title>
+    <title>Projetos | ADS</title>
 </head>
 <body>
     <img class="imagem-gradiente" src="gradient.png" alt="gradiente" />
     <div class="layer-blur"></div>
     <div class="cabecalho">
       <div class="topo">
-    <header>
-      <!-- Cuidado quando for mexer aqui me avisa antes-->
-      <a href="index.html" class="link_l"><h1 class="logo">ADS</h1></a>
-      <!---Navbar-->
-      <div class="menu">
-      <nav>
-        <ul class="nav-links">
-        <li class="dropdown">
-          <a href="sobre.html">Sobre</a>
-          <ul class="opcao">
-            <li><a href="colacao.html">Colação</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li class="dropdown-2">
-              <a href="">Documentação</a>
-              <ul class="opcao-2">
-                <li><a href="projetos.html">projetos</a></li>
-                <li>habilidades</li>
-                <li>Sobre</li>
-                <li>IFCE</li>
+        <header>
+          <a href="index.html" class="link_l"><h1 class="logo">ADS</h1></a>
+          <div class="menu">
+            <nav>
+              <ul class="nav-links">
+                <li class="dropdown">
+                  <a href="sobre.html">Sobre</a>
+                  <ul class="opcao">
+                    <li><a href="colacao.html">Colação</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li class="dropdown-2">
+                      <a href="">Documentação</a>
+                      <ul class="opcao-2">
+                        <li><a href="projetos.html">projetos</a></li>
+                        <li>habilidades</li>
+                        <li>Sobre</li>
+                        <li>IFCE</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="campus.html">Campus</a></li>
+                <li><a href="">Grade</a></li>
+                <li><a href="">Disciplinas</a></li>
               </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="campus.html">Campus</a></li>
-        <li><a href="">Grade</a></li>
-        <li><a href="">Disciplinas</a></li>
-        </ul>
-      </nav>
-    </div>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-      <button class="btn-signin">Ingressar</button>
-    </header>
-</div>
-    </div>
-
-
-
-    <main>
-      <div class="container">
-        <h1 class="titulo">Projetos Desenvolvidos</h1>
-
-<p>
-Ao longo da formação, os alunos desenvolvem projetos práticos voltados para
-necessidades reais de empresas e instituições da região. Essas soluções
-permitem aplicar conhecimentos de programação, banco de dados, análise de
-sistemas e desenvolvimento de software, proporcionando experiência próxima ao
-mercado de trabalho.
-</p>
-
-<div class="grid grid-2">
-
-  <div class="card">
-    <h3>ClinicSys – Sistema de Gestão para Clínicas Médicas</h3>
-    <p>
-      Gerenciamento de pacientes, consultas e prontuários médicos.
-    </p>
-    <p><strong>Cliente:</strong> Clínica Médica Boa Viagem</p>
-  </div>
-
-  <div class="card">
-    <h3>SANTA ANA MANAGER – Sistema PDV e Controle Comercial</h3>
-    <p>
-      Controle de vendas, estoque e gestão comercial da farmácia.
-    </p>
-    <p><strong>Cliente:</strong> Farmácia Santa Ana – Umirim/CE</p>
-  </div>
-
-  <div class="card">
-    <h3>DIPE – Diagnóstico Pedagógico Inteligente Escolar</h3>
-    <p>
-      Auxilia professores na avaliação e acompanhamento dos alunos.
-    </p>
-    <p><strong>Cliente:</strong> Programa Partiu IF e Escolas Municipais de Boa Viagem</p>
-  </div>
-
-  <div class="card">
-    <h3>FarmaVet - Sistema de Gestão para Clínica Veterinária e Pet Shop</h3>
-    <p>
-      Controle de atendimentos, clientes, pets e produtos.
-    </p>
-    <p><strong>Cliente:</strong> FarmaVet Clínica Veterinária e Pet Shop</p>
-  </div>
-
-  
-  </div>
-
-</div>
+            </nav>
           </div>
-        </div>
+          <button class="hamburger" onclick="toggleMenu()">☰</button>
+          <button class="btn-signin">Ingressar</button>
+        </header>
       </div>
-    </main>
+    </div>
+
+    <section class="projetos-hero">
+      <h1>Projetos Desenvolvidos</h1>
+      <p>
+        Ao longo da formação, os alunos desenvolvem projetos práticos voltados para
+        necessidades reais de empresas e instituições da região, aplicando conhecimentos
+        de programação, banco de dados e análise de sistemas.
+      </p>
+    </section>
+
+    <section class="projetos-grid">
+      <div class="projeto-card">
+        <h3>ClinicSys – Sistema de Gestão para Clínicas Médicas</h3>
+        <p>Gerenciamento de pacientes, consultas e prontuários médicos.</p>
+        <span class="projeto-cliente">Cliente: Clínica Médica Boa Viagem</span>
+      </div>
+
+      <div class="projeto-card">
+        <h3>SANTA ANA MANAGER – Sistema PDV e Controle Comercial</h3>
+        <p>Controle de vendas, estoque e gestão comercial da farmácia.</p>
+        <span class="projeto-cliente">Cliente: Farmácia Santa Ana – Umirim/CE</span>
+      </div>
+
+      <div class="projeto-card">
+        <h3>DIPE – Diagnóstico Pedagógico Inteligente Escolar</h3>
+        <p>Auxilia professores na avaliação e acompanhamento dos alunos.</p>
+        <span class="projeto-cliente">Cliente: Programa Partiu IF e Escolas Municipais de Boa Viagem</span>
+      </div>
+
+      <div class="projeto-card">
+        <h3>FarmaVet - Sistema de Gestão para Clínica Veterinária e Pet Shop</h3>
+        <p>Controle de atendimentos, clientes, pets e produtos.</p>
+        <span class="projeto-cliente">Cliente: FarmaVet Clínica Veterinária e Pet Shop</span>
+      </div>
+    </section>
 
     <footer>
       <div class="container">
@@ -134,5 +110,11 @@ mercado de trabalho.
         </div>
       </div>
     </footer>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector('nav').classList.toggle('active');
+      }
+    </script>
 </body>
 </html>
