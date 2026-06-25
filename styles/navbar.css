@@ -27,14 +27,20 @@ a {
 }
 .opcao {
   position: absolute;
-  padding: 2em 0.5em 1em;
-  margin: -0.5em -3em;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1.5em 0.5em 0.5em;
   color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.44);
   backdrop-filter: blur(10px);
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.209);
   border-radius: 1em;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+  min-width: 160px;
+  z-index: 100;
 }
 li {
   border-radius: 1em;
@@ -50,21 +56,28 @@ li:hover {
 }
 .dropdown:hover .opcao,
 .dropdown-2:hover .opcao-2 {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .opcao-2 {
   position: absolute;
+  top: 0;
+  left: 100%;
   padding: 0.5em;
-  margin: -2.8em 12.5em;
   color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.454);
   backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.215);
   border-radius: 1em;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+  min-width: 140px;
+  z-index: 101;
 }
 .dropdown-2:hover .opcao-2 {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 ul {
   list-style: none;
