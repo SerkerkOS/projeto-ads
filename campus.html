@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus | ADS</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="cabecalho">
+      <div class="topo">
+        <header>
+          <h1 class="logo">ADS</h1>
+          <div class="menu">
+            <nav>
+              <ul class="nav-links">
+                <li class="dropdown">
+                  <a href="">Sobre</a>
+                  <ul class="opcao">
+                    <li><a href="">Colação</a></li>
+                    <li><a href=""></a></li>
+                    <li class="dropdown-2">
+                      <a href="">Documentação</a>
+                      <ul class="opcao-2">
+                        <li>projetos</li>
+                        <li>habilidades</li>
+                        <li>Sobre</li>
+                        <li>IFCE</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="">Campus</a></li>
+                <li><a href="">Grade</a></li>
+                <li><a href="">Disciplinas</a></li>
+              </ul>
+            </nav>
+          </div>
+          <button class="hamburger" onclick="toggleMenu()">☰</button>
+          <button class="btn-signin">Ingressar</button>
+        </header>
+      </div>
+    </div>
+
+    <section class="campus-wrapper">
+      <div class="campus-text">
+        <h2>Sobre o Campus</h2>
+        <p>
+          O Instituto Federal de Educação, Ciência e Tecnologia do Ceará —
+          Campus Boa Viagem está localizado na cidade de Boa Viagem, no Sertão
+          Central cearense. É uma referência regional em educação profissional,
+          tecnológica e superior, oferecendo cursos de qualidade que integram
+          ensino, pesquisa e extensão.
+        </p>
+      </div>
+      <div class="campus-image">
+        <img src="img/campus.jpeg" alt="IFCE Campus Boa Viagem" />
+      </div>
+    </section>
+
+    <section class="infra-section">
+      <h2>Infraestrutura</h2>
+      <div class="infra-grid">
+        <div class="infra-item">
+          <img src="img/laboratorio.jpeg" alt="Laboratório de Informática" />
+          <h3>Laboratórios de Informática</h3>
+          <p>Equipamentos modernos para aulas práticas de programação, redes e banco de dados.</p>
+        </div>
+        <div class="infra-item">
+          <h3>Biblioteca</h3>
+          <p>Acervo físico e digital, com espaços de estudo individual e em grupo.</p>
+        </div>
+        <div class="infra-item">
+          <img src="img/refeitorio.jpeg" alt="Restaurante Estudantil" />
+          <h3>Restaurante Estudantil</h3>
+          <p>Refeições subsidiadas para os estudantes da instituição.</p>
+        </div>
+        <div class="infra-item">
+          <h3>Quadras Esportivas</h3>
+          <p>Espaços para prática de esportes e atividades de extensão.</p>
+        </div>
+        <div class="infra-item">
+          <h3>Auditório</h3>
+          <p>Local de eventos, palestras e defesas de trabalhos.</p>
+        </div>
+        <div class="infra-item">
+          <h3>Internet Wi-Fi</h3>
+          <p>Cobertura em todo o campus para uso acadêmico.</p>
+        </div>
+        <div class="infra-item">
+          <img src="img/recepçao.jpeg" alt="Recepção do Campus" />
+          <h3>Recepção</h3>
+          <p>Ambiente acolhedor para receber estudantes, visitantes e comunidade externa.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div>
+          <h4>IFCE Campus Boa Viagem</h4>
+          <p>
+            Curso Superior em Análise e Desenvolvimento de Sistemas. Formando
+            profissionais para a transformação digital do sertão central
+            cearense.
+          </p>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <a href="index.html">Início</a>
+          <a href="sobre.html">Sobre o Curso</a>
+          <a href="grade.html">Grade Curricular</a>
+          <a href="projetos.html">Projetos</a>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <a href="contato.html">Fale Conosco</a>
+          <p>
+            Rodovia Presidente Juscelino Kubitschek, BR 020, Km 209<br />Boa
+            Viagem - CE
+          </p>
+        </div>
+        <div class="copy">
+          © 2026 Portfólio ADS — IFCE Campus Boa Viagem. Todos os direitos
+          reservados.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector('nav').classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>
